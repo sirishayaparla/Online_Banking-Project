@@ -22,31 +22,8 @@ public class OlympicsMedalCount {
 		List<WebElement> bronze = driver.findElements(By.xpath("//div[@title=\"Bronze\"]"));
 		
 		for(int i=0;i<teams.size();i++) {
-			String team = teams.get(i).getText();
-			String g = gold.get(i).getText();
-			System.out.println(team +" "+g);
+			System.out.println(teams.get(i).getText()+"    "+gold.get(i).getText()+"    "+silver.get(i).getText()+"    "+bronze.get(i).getText());
 		}
-		System.out.println("silver medals");
-		for(int i=0;i<teams.size();i++) {
-			String team = teams.get(i).getText();
-			String s = silver.get(i).getText();
-			System.out.println(team+" "+s);
-		}
-		
-		System.out.println("silver medals");
-		for(int i=0;i<teams.size();i++) {
-			String team = teams.get(i).getText();
-			String s = silver.get(i).getText();
-			System.out.println(team+" "+s);
-		}
-		System.out.println("Bronze medals");
-		for(int i=0;i<teams.size();i++) {
-			String team = teams.get(i).getText();
-			String b = bronze.get(i).getText();
-			System.out.println(team+" "+b);
-		}
-
-		
 		driver.close();
 	}
 

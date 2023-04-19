@@ -15,7 +15,9 @@ public class DatabaseUtility {
 	public void conenectToBB() throws Throwable {
 		
 		Driver driver=new Driver();
+		
 		DriverManager.registerDriver(driver);
+		
 		con=DriverManager.getConnection(IpathConstant.DBURL, IpathConstant.DBUSERNAME, IpathConstant.DBPASSWORD);		
 	}
 	

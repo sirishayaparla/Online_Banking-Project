@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="RS.MakeMyTrip1">
+      <class name="RS.FlightBooking">
         <methods>
-          <include name="bookBus"/>
+          <include name="flight"/>
         </methods>
-      </class> <!-- RS.MakeMyTrip1 -->
+      </class> <!-- RS.FlightBooking -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

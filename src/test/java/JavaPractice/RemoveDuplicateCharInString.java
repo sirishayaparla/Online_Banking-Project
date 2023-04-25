@@ -13,6 +13,7 @@ public class RemoveDuplicateCharInString {
 		for(int i=0;i<=st.length()-1;i++) {
 			set.add(st.charAt(i));//it will add the character to set
 		}
+		
 		//after removing duplicates we will print here
 		for(Character ch:set) {
 			System.out.println(ch+" ");

@@ -26,7 +26,7 @@ public class UpdateDataInDatabase {
 			
 		}
 		finally{
-			if(result==0) {
+			if(result==1) {
 				System.out.println("data updated");
 			}
 			else {

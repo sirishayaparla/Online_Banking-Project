@@ -14,10 +14,10 @@ public class ArraySortingBB {
 					a[j]=temp;
 				}
 			}
-			System.out.println(a[i]);
+			//System.out.println(a[i]);
 		}
 		
-		
+		System.out.println(a[1]);
 	}
 
 }

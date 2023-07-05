@@ -7,7 +7,6 @@ public class Stringrev {
 		
 		String s="sirisha";
 		char[] st = s.toCharArray();
-		
 			String rev="";
 			
 			for(int i=s.length()-1;i>=0;i--) {

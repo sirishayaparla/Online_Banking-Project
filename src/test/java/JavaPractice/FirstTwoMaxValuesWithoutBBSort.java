@@ -1,5 +1,5 @@
 package JavaPractice;
-
+//worng
 public class FirstTwoMaxValuesWithoutBBSort {
 
 	public static void main(String[] args) {
@@ -8,20 +8,20 @@ public class FirstTwoMaxValuesWithoutBBSort {
 		int fmax=a[0];
 		int smax=a[0];
 		for(int i=0;i<a.length;i++) {
-				if(a[i]<fmax) {
+				if(a[i]>fmax) {
 
 					smax=fmax;
 					fmax=a[i];
 				}
-				else if(a[i]<smax) {
+				else if(a[i]>smax && a[i]<fmax) {
 					smax=a[i];
 				}
 			}
-		System.out.println(a[a.length-1]);
-		System.out.println(a[a.length-2]);
+		//System.out.println(a[a.length-1]);
+	//	System.out.println(a[a.length-2]);
 
-//		System.out.println(fmax);
-//		System.out.println(smax);
+	System.out.println(fmax);
+		System.out.println(smax);
 
 		
 	}

@@ -145,7 +145,24 @@ public class WebDriverUtility {
 		 FileUtils.copyFile(src, dst);
 		 return path;
 	 }
+	 public void switchWindow(WebDriver driver) {
+			Set<String> all = driver.getWindowHandles();
+			for(String w:all) {
+					driver.switchTo().window(w);
+				}
+
+	 }
 	 
+	 public void robott(WebDriver driver) throws AWTException {
+			Robot r=new Robot();
+			r.keyPress(KeyEvent.VK_TAB);
+			r.keyRelease(KeyEvent.VK_TAB);
+			r.keyPress(KeyEvent.VK_TAB);
+			r.keyRelease(KeyEvent.VK_TAB);
+			r.keyPress(KeyEvent.VK_ENTER);
+			r.keyRelease(KeyEvent.VK_ENTER);
+
+	 }
 	 public void scroolBarActions(WebDriver driver,WebElement element) {
 		 JavascriptExecutor jse=(JavascriptExecutor)driver;
 		 int y = element.getLocation().getY();

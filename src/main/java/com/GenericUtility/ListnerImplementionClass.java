@@ -27,18 +27,13 @@ public class ListnerImplementionClass implements ITestListener{
 		String methodName=result.getMethod().getMethodName();
 		test = report.createTest(methodName);
 		Reporter.log(methodName+"=====>Testscript excution started");
-	
-
 	}
 
 	public void onTestSuccess(ITestResult result) {
 		String methodName=result.getMethod().getMethodName();
 		test.log(Status.PASS, methodName+"=====>Testscript execution started");
 		Reporter.log(methodName+"=======>Testscript execution succesful");
-
-		
 	}
-
 	public void onTestFailure(ITestResult result) {
 
 		EventFiringWebDriver edriver=new EventFiringWebDriver(BaseClass.sdriver);
@@ -46,7 +41,6 @@ public class ListnerImplementionClass implements ITestListener{
 	//	String fs = methodName+new JavaUtility().getSystemDate();
 		File src = edriver.getScreenshotAs(OutputType.FILE);
 		File dst = new File("./screenshot/"+methodName+".png");
-		
 		
 		try {
 			FileUtils.copyFile(src, dst);
@@ -58,13 +52,11 @@ public class ListnerImplementionClass implements ITestListener{
 		Reporter.log("Testscript execution skipped");
 
 	}
-
 	public void onTestSkipped(ITestResult result) {
 		String methodName=result.getMethod().getMethodName();
 		test.log(Status.SKIP, methodName+"======>Skipped");
 		test.log(Status.SKIP, result.getThrowable() );
 		Reporter.log("Testscript execution skipped");
-
 	}
 
 	public void onStart(ITestContext context) {
